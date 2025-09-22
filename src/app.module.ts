@@ -5,6 +5,7 @@ import { AppService } from './app.service';
 import { UserModule } from './user/user.module';
 import { BookModule } from './book/book.module';
 import { appConfig } from './config/app.config';
+import { PostModule } from './post/post.module';
 
 @Module({
   imports: [
@@ -14,7 +15,7 @@ import { appConfig } from './config/app.config';
        load:[appConfig]
       }
     ), 
-    UserModule, BookModule],
+    UserModule, BookModule, PostModule],
   controllers: [AppController],
   providers: [AppService],
 })
