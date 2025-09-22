@@ -10,10 +10,16 @@ export class UserService {
     constructor() {}
 
     getUser() {
-        return { id: 1, name: 'John Doe' };
+        return this.userData;
     }
 
     getUserById( id: number ) {
-        return { id: 1, name: 'John Doe' };
+        return this.userData.find(user => user.id === id);
     }
+    
+    // get with query
+    getUserByIdwithQuery( name: string ) {
+        return this.userData.find(user => user.name === name);
+    }
+
 }
