@@ -3,12 +3,12 @@ import { POST } from './interface/post.interface';
 
 @Injectable()
 export class PostService {
-    private posts:POST = [
+    private posts: POST[] = [
         {
             id: 1,
-            title: 'title 1',
-            content: 'content 1',
-            authorName: 'author 1',
+            title: 'The Book',
+            content: 'content book',
+            authorName: 'khan',
             createdAt: new Date(),
             updatedAt: new Date()
         }, {
@@ -31,4 +31,5 @@ export class PostService {
     findAll(): POST[] {
         return this.posts
     }
+
 }
