@@ -20,4 +20,5 @@ export class UserController {
     getUserByIdwithQuery( @Query('name') name: string ) {
         return this.userService.getUserByIdwithQuery(name);
     }
+
 }

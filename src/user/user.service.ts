@@ -5,7 +5,8 @@ export class UserService {
     userData = [
         { id: 1, name: 'John Doe' },
         { id: 2, name: 'Jane Smith' },
-        { id: 3, name: 'Bob Johnson' }
+        { id: 3, name: 'Bob Johnson' },
+        {id:4,name:'Ravi Kumar'},
     ]
     constructor() {}
 
@@ -18,8 +19,11 @@ export class UserService {
     }
     
     // get with query
+    // user/?name=John
     getUserByIdwithQuery( name: string ) {
         return this.userData.find(user => user.name === name);
     }
+
+    // 
 
 }
