@@ -1,4 +1,4 @@
-import { Controller } from '@nestjs/common';
+import { Controller, Get } from '@nestjs/common';
 import { BookService } from './book.service';
 import { ConfigService } from '@nestjs/config';
 
@@ -6,7 +6,9 @@ import { ConfigService } from '@nestjs/config';
 export class BookController {
     constructor (private readonly bookService: BookService , private  configService:ConfigService) {}
 
-    getBooks() {
-        return this.bookService.getBooks();
+    @Get()
+    getAppName() {
+        const APP_NAME = this.configService.get<string>('APP_NAME');
+        return `App name ${APP_NAME}`;
     }
 }
